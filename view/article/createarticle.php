@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Create Article</title>
-    </head>
-    <body>
-		<div style="float:left;position:fixed;" class="col-md-8">
+	<div style="float:left;position:fixed;" class="col-md-8">
 		<h1>Create new article</h1>
-        <form action="controller/create.php" method="POST" class="form-horizontal">
+        <form action="index.php?controller=article&action=create" method="POST" class="form-horizontal">
         <table>
 		<div class="form-group">
             <tr><td><label>Title : </label></td><td>
@@ -32,6 +25,4 @@
 		</div>
         </table>
         </form>
-		</div>
-    </body>
-</html>
+	</div>
