@@ -9,6 +9,7 @@
 <?php
 	include('library/autoload.php');
 	include('library/conn.php');
+	include('library/pagination.php');
 	if(isset($_GET['controller'])){
 		switch($_GET['controller']){
 			case "article" : include('controller/article/controller.php');

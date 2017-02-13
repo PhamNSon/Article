@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2017-02-13 11:43:16
+Date: 2017-02-14 00:06:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,7 +29,7 @@ CREATE TABLE `articles` (
   `date_created` datetime NOT NULL,
   `date_updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of articles
@@ -64,7 +64,6 @@ INSERT INTO `articles` VALUES ('45', '0', 'fvdfvdf', 'dfbdfbdfb', null, '1', '20
 INSERT INTO `articles` VALUES ('46', '0', 'gftrbt', 'rtbrtrtj', null, '1', '2017-02-10 00:00:00', '0000-00-00 00:00:00');
 INSERT INTO `articles` VALUES ('47', '0', 'dfdfdfh', 'dfhdfhdfhdfh', null, '1', '2017-02-10 00:00:00', '0000-00-00 00:00:00');
 INSERT INTO `articles` VALUES ('48', '0', 'tỵghkghk', 'ghjghkghkghjgh', null, '1', '2017-02-10 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `articles` VALUES ('49', '0', '', '', null, '1', '2017-02-10 00:00:00', '0000-00-00 00:00:00');
 INSERT INTO `articles` VALUES ('50', '0', 'ưefweewc', 'dfvdfbfdnjfgj', null, '1', '2017-02-10 00:00:00', '0000-00-00 00:00:00');
 INSERT INTO `articles` VALUES ('51', '0', 'xinchao', 'sdfsdfsdf', null, '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 INSERT INTO `articles` VALUES ('52', '0', 'helo', 'sdfsdfsdf', null, '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
@@ -76,6 +75,28 @@ INSERT INTO `articles` VALUES ('57', '0', 'testlan2', 'sdfsdfsdfs', null, '1', '
 INSERT INTO `articles` VALUES ('58', '0', 'testlan3', 'qÆ°dqwdqwdqwd', null, '1', '2017-02-13 00:00:00', '2017-02-13 00:00:00');
 INSERT INTO `articles` VALUES ('59', '0', 'testlan4', 'adasfasfasasc', null, '1', '2017-02-13 00:00:00', '0000-00-00 00:00:00');
 INSERT INTO `articles` VALUES ('60', '0', 'testlan5', 'dgdfdfhgdfh', null, '1', '2017-02-13 00:00:00', '2017-02-13 00:00:00');
+INSERT INTO `articles` VALUES ('61', '0', 'testlan6', 'kjlkjlioih', null, '1', '2017-02-13 00:00:00', '2017-02-13 00:00:00');
+INSERT INTO `articles` VALUES ('62', '0', 'testlan7', 'mkjljhlkhilhklk', null, '1', '2017-02-13 00:00:00', '2017-02-13 00:00:00');
+INSERT INTO `articles` VALUES ('63', '0', 'testlan8', 'dfsfwefwef', null, '1', '2017-02-13 00:00:00', '2017-02-13 00:00:00');
+INSERT INTO `articles` VALUES ('64', '0', 'testlan9', 'sdfsdfsdfsdfsdf', null, '1', '2017-02-13 07:59:00', '2017-02-13 00:00:00');
+INSERT INTO `articles` VALUES ('65', '0', 'testlan10', 'dsfsdfsdfsdf', null, '1', '2017-02-13 08:00:53', '2017-02-13 08:00:53');
+INSERT INTO `articles` VALUES ('66', '0', 'testlan11', 'Thá»i tiáº¿t khÃ¡ Ä‘áº¹p', null, '1', '2017-02-13 16:46:08', '2017-02-13 16:46:08');
+INSERT INTO `articles` VALUES ('67', '0', 'testlan12', 'ná»• bom á»Ÿ má»¹', null, '1', '2017-02-13 16:50:14', '2017-02-13 16:50:14');
+INSERT INTO `articles` VALUES ('68', '0', 'testlan13', 'Viet nam so 1', null, '1', '2017-02-13 16:52:16', '2017-02-13 16:52:16');
+INSERT INTO `articles` VALUES ('69', '0', 'testlan14', 'Life is good', null, '1', '2017-02-13 16:52:56', '2017-02-13 16:52:56');
+INSERT INTO `articles` VALUES ('70', '0', 'testlan15', 'Test', null, '1', '2017-02-13 16:54:30', '2017-02-13 16:54:30');
+INSERT INTO `articles` VALUES ('71', '0', 'testlan16', 'dsfsdfsf', null, '1', '2017-02-13 16:55:07', '2017-02-13 16:55:07');
+INSERT INTO `articles` VALUES ('72', '0', 'testlan17', 'fsdfsdfsf', null, '1', '2017-02-13 16:57:14', '2017-02-13 16:57:14');
+INSERT INTO `articles` VALUES ('73', '0', 'testlan18', 'sdfsdfsdfsdf', null, '1', '2017-02-13 17:02:27', '2017-02-13 17:02:27');
+INSERT INTO `articles` VALUES ('74', '0', 'testlan19', 'dfsdsdgsdg', null, '1', '2017-02-13 17:09:26', '2017-02-13 17:09:26');
+INSERT INTO `articles` VALUES ('75', '0', 'testlan20', 'sdfsdfsdf', null, '1', '2017-02-13 17:21:55', '2017-02-13 17:21:55');
+INSERT INTO `articles` VALUES ('76', '0', 'testlan21', 'dsfsdfsdfs', null, '1', '2017-02-13 17:23:58', '2017-02-13 17:23:58');
+INSERT INTO `articles` VALUES ('77', '0', 'testlan22', 'Ã¡dasdasdasdasd', null, '1', '2017-02-13 17:26:04', '2017-02-13 17:26:04');
+INSERT INTO `articles` VALUES ('78', '0', 'testlan23', 'adasdasdasdasd', null, '1', '2017-02-13 17:29:05', '2017-02-13 17:29:05');
+INSERT INTO `articles` VALUES ('79', '1', 'testlan23', 'adasdasdasdasd', null, '1', '2017-02-13 17:30:21', '2017-02-13 17:30:21');
+INSERT INTO `articles` VALUES ('80', '2', 'testlan24', 'sdasdasdasdasd', null, '1', '2017-02-13 17:30:45', '2017-02-13 17:30:45');
+INSERT INTO `articles` VALUES ('81', '3', 'testlan25', 'Ã¡dsadasdasd', null, '1', '2017-02-13 17:55:04', '2017-02-13 17:55:04');
+INSERT INTO `articles` VALUES ('86', '1', 'testlan26', 'Ã¡dasfsafasf', null, '1', '2017-02-13 18:04:04', '2017-02-13 18:04:04');
 
 -- ----------------------------
 -- Table structure for categories
@@ -87,10 +108,11 @@ CREATE TABLE `categories` (
   `date_created` datetime NOT NULL,
   `date_updated` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of categories
 -- ----------------------------
-INSERT INTO `categories` VALUES ('1', 'Truyện cười', '2017-02-08 22:33:46', '0000-00-00 00:00:00');
-INSERT INTO `categories` VALUES ('2', 'Truyện kiếm hiệp', '2017-02-08 22:34:10', '0000-00-00 00:00:00');
+INSERT INTO `categories` VALUES ('1', 'News', '2017-02-08 22:33:46', '0000-00-00 00:00:00');
+INSERT INTO `categories` VALUES ('2', 'Weather', '2017-02-08 22:34:10', '0000-00-00 00:00:00');
+INSERT INTO `categories` VALUES ('3', 'Life', '2017-02-13 22:33:58', '2017-02-13 22:34:01');

@@ -1,10 +1,11 @@
-<div class="col-md-2 col-md-offset-9"><h3><strong><a href="index.php?controller=article&action=create">Create</a></strong></h3></div>
+<div class="col-md-4 col-md-offset-8"><h3><strong><a href="index.php?controller=article&action=create">Create|</a><a href="index.php">Home</a></strong></h3>
+</div>
 <div class="row"> 
 	<div class="col-md-6 col-md-offset-1">
 	<h1>Article list</h1>
 	<?php
-		if(isset($listall)){
-			foreach ($listall as $row){
+		if(isset($view)){
+			foreach ($view as $row){
 		?>
 		<p><strong><a href="index.php?controller=article&action=view&id=<?php echo $row['id'] ?>"><?php echo $row['title'] ?></a></strong></p>
 		<p><?php echo substr($row['content'],0,100) ?></p>

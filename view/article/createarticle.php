@@ -4,16 +4,16 @@
         <table>
 		<div class="form-group">
             <tr><td><label>Title : </label></td><td>
-			<input class="form-control" type="text" name="title"/></td></tr>
+			<input class="form-control" type="text" name="title" required=”required”/></td></tr>
 		</div>
 		<div class="form-group">
 			<tr><td><label>Category : </label></td>
 			<td>
-				<select name="cate" class="form-control">
-					<option>Truyện cười</option>
-					<option>Truyện kiếm hiệp</option>
-					<option>Truyện ngôn tình</option>
-					<option>Truyện tiên hiệp</option>
+				<select name="cate" class="form-control" required>
+					<option value="">--Select--</option>
+					<option value="1">News</option>
+					<option value="2">Weather</option>
+					<option value="3">Life</option>
 				</select>		
 			</td>
 		</div>

@@ -20,7 +20,15 @@ class article extends conn{
 	public function get_id(){
 		return $this->id;
 	}
-		
+
+	public function set_categoryid($category_id){
+		$this->categoryid=$category_id;
+	}
+	
+	public function get_categoryid(){
+		return $this->categoryid;
+	}
+	
 	public function set_title($title){
 		$this->title=$title;
 	}
@@ -45,24 +53,17 @@ class article extends conn{
 		return $this->status;
 	}
 		
-/*	public function set_datecreated($date_created){
-		$this->datecreated=$date_created;
-	}
-
-	public function get_datecreated(){
-		return $this->datecreated;
-	}
-	
-	public function set_dateupdated($date_updated){
-		$this->dateupdated=$date_updated;
-	}
-
-	public function get_dateupdated(){
-		return $this->dateupdated;
-	}
-*/	
-	public function listall(){
-		$sql="select count(id) as total from articles";
+	public function listall($start, $limit){
+		$sql = "SELECT * FROM articles LIMIT $start, $limit";
+		$this->query($sql);
+		$result = array();
+		$i = 0;
+		while ($row = $this->fetch()){
+			$result[$i]=array("id"=>$row['id'],"title"=>$row['title'],"content"=>$row['content'],"status"=>$row['status'],"datecreated"=>$row['date_created'],"dateupdated"=>$row['date_updated']);
+			$i++;
+		}	
+		return $result;
+/*   		$sql="select count(id) as total from articles";
 		$this->query($sql);
 		$row=$this->fetch();
 		$total_records = $row['total'];
@@ -81,7 +82,7 @@ class article extends conn{
 		$sql1="SELECT * FROM articles LIMIT $start, $limit";
 		$this->query($sql1);
 		$result = array();
-        if ($current_page > 1 && $total_page > 1){
+         if ($current_page > 1 && $total_page > 1){
             echo '<a href="index.php?controller=article&action=listall&page='.($current_page-1).'">Prev</a> | ';
             }
 			
@@ -96,15 +97,24 @@ class article extends conn{
  
         if ($current_page < $total_page && $total_page > 1){
             echo '<a href="index.php?controller=article&action=listall&page='.($current_page+1).'">Next</a> | ';			
-		}		
-
+		}
+ 
+		$sql="select * from articles";$this->query($sql);
 		$i = 0;
 		while ($row = $this->fetch()){
 			$result[$i]=array("id"=>$row['id'],"title"=>$row['title'],"content"=>$row['content'],"status"=>$row['status'],"datecreated"=>$row['date_created'],"dateupdated"=>$row['date_updated']);
 			$i++;
 		}
-		return $result;
+		
+		return $result;*/	
 	}
+	
+	public function totalRecord(){
+		$sql = "select * from articles";
+		$this->query($sql);
+		return $this->num_row();
+	}
+	
 	public function view(){
 		$sql="select * from articles where id='$this->id'";
 		$this->query($sql);
@@ -113,15 +123,15 @@ class article extends conn{
 	}
 	public function create(){
 		$now=getdate();
-		$datecreated=$now["year"] . "-" . $now["mon"] . "-" . $now["mday"] ;
-		$dateupdated=$now["year"] . "-" . $now["mon"] . "-" . $now["mday"] ;
+		$datecreated=$now["year"] . "-" . $now["mon"] . "-" . $now["mday"]. " ".$now["hours"].":".$now["minutes"].":".$now['seconds'] ;
+		$dateupdated=$now["year"] . "-" . $now["mon"] . "-" . $now["mday"]. " ".$now["hours"].":".$now["minutes"].":".$now['seconds'] ;
 		if($this->num_row()==0){
-			$sql="insert into articles(title,content,status,date_created,date_updated) values ('$this->title','$this->content','$this->status','$datecreated','$dateupdated')";
+			$sql="insert into articles(category_id,title,content,status,date_created,date_updated) values ('$this->categoryid','$this->title','$this->content','$this->status','$datecreated','$dateupdated')";
 			$this->query($sql);
 		}
 		else{
 			return "fail";
 		}
-	}	
+	}
 }
 ?>
