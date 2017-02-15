@@ -9,10 +9,8 @@
 		<p><strong><a href="index.php?controller=article&action=view&id=<?php echo $row['id'] ?>"><?php echo $row['title'] ?></a></strong></p>
 		<p><?php echo substr($row['content'],0,100) ?></p>
 		<p> Date created : <?php echo $row['datecreated'] ?></p>
-		<?php	
-		
-		} 
-		
+		<?php
+		}
 		}
 		?>
 	</div>
@@ -25,9 +23,10 @@
 		while ($row1 = mysqli_fetch_assoc($kq)){
 		?>
 		<p><strong><a href="index.php?controller=category&action=view&id=<?php echo $row1['id'] ?>"><?php echo $row1['name'] ?></a></strong></p>
-		<?php }	
-	?>
-	</div> 
+		<?php
+		}
+		?>
+	</div>
 <div class="col-md-10 col-md-offset-1" style="text-align:center">
 <?php echo $Pagination->listPages($totalPages); ?>
 </div>

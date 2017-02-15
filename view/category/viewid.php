@@ -1,4 +1,4 @@
-<div class="col-md-4 col-md-offset-8"><h3><strong><a href="index.php?controller=article&action=create">Create|</a><a href="index.php">Home</a></strong></h3>
+<div class="col-md-4 col-md-offset-8"><h3><a href="index.php?controller=article&action=create">Create|</a><a href="index.php">Home</a></h3>
 </div>
 <div class="row"> 
 	<div class="col-md-6 col-md-offset-1">
@@ -10,10 +10,8 @@
 		<p><strong><a href="index.php?controller=article&action=view&id=<?php echo $row['id'] ?>"><?php echo $row['title'] ?></a></strong></p>
 		<p><?php echo substr($row['content'],0,100) ?></p>
 		<p> Date created : <?php echo $row['datecreated'] ?></p>
-		<?php	
-		
-		} 
-		
+		<?php
+		}
 		}
 		?>
 	</div>
@@ -26,9 +24,10 @@
 		while ($row1 = mysqli_fetch_assoc($kq)){
 		?>
 		<p><strong><a href="index.php?controller=category&action=view&id=<?php echo $row1['id'] ?>"><?php echo $row1['name'] ?></a></strong></p>
-		<?php }	
+		<?php
+		}	
 	?>
-	</div> 
+	</div>
 <div class="col-md-10 col-md-offset-1" style="text-align:center">
 <?php echo $Pagination->listPages($totalPages); ?>
 </div>

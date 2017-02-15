@@ -6,7 +6,7 @@
 ?>
 		<h3>Article title : <?php echo $result["title"] ?></h3>
 		Article content : <br/><textarea class="form-control" rows="20"><?php echo $result["content"] ?></textarea>
-		<p>Date created : <?php echo $result["date_created"] ?></p>
+		<p>Date created : <?php echo $result["created"] ?></p>
 <?php		
 	}
 ?>

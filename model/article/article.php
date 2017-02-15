@@ -6,8 +6,8 @@ class article extends conn{
 	protected $content;
 	protected $tags;
 	protected $status;
-	protected $date_created;
-	protected $date_updated;
+	protected $created;
+	protected $modified;
 	
 	public function __construct(){
 		$this->connect();
@@ -59,7 +59,7 @@ class article extends conn{
 		$result = array();
 		$i = 0;
 		while ($row = $this->fetch()){
-			$result[$i]=array("id"=>$row['id'],"title"=>$row['title'],"content"=>$row['content'],"status"=>$row['status'],"datecreated"=>$row['date_created'],"dateupdated"=>$row['date_updated']);
+			$result[$i]=array("id"=>$row['id'],"title"=>$row['title'],"content"=>$row['content'],"status"=>$row['status'],"datecreated"=>$row['created'],"dateupdated"=>$row['modified']);
 			$i++;
 		}	
 		return $result;
@@ -102,7 +102,7 @@ class article extends conn{
 		$sql="select * from articles";$this->query($sql);
 		$i = 0;
 		while ($row = $this->fetch()){
-			$result[$i]=array("id"=>$row['id'],"title"=>$row['title'],"content"=>$row['content'],"status"=>$row['status'],"datecreated"=>$row['date_created'],"dateupdated"=>$row['date_updated']);
+			$result[$i]=array("id"=>$row['id'],"title"=>$row['title'],"content"=>$row['content'],"status"=>$row['status'],"datecreated"=>$row['created'],"dateupdated"=>$row['modified']);
 			$i++;
 		}
 		
@@ -126,7 +126,7 @@ class article extends conn{
 		$datecreated=$now["year"] . "-" . $now["mon"] . "-" . $now["mday"]. " ".$now["hours"].":".$now["minutes"].":".$now['seconds'] ;
 		$dateupdated=$now["year"] . "-" . $now["mon"] . "-" . $now["mday"]. " ".$now["hours"].":".$now["minutes"].":".$now['seconds'] ;
 		if($this->num_row()==0){
-			$sql="insert into articles(category_id,title,content,status,date_created,date_updated) values ('$this->categoryid','$this->title','$this->content','$this->status','$datecreated','$dateupdated')";
+			$sql="insert into articles(category_id,title,content,status,created,modified) values ('$this->categoryid','$this->title','$this->content','$this->status','$datecreated','$dateupdated')";
 			$this->query($sql);
 		}
 		else{
