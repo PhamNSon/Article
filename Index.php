@@ -7,19 +7,14 @@
 </head>
 <body>
 <?php
-	include('library/autoload.php');
-	include('library/conn.php');
-	include('library/pagination.php');
-	if(isset($_GET['controller'])){
-		switch($_GET['controller']){
-			case "article" : include('controller/article/controller.php');
-			break;
-			case "category" : include('controller/category/controller.php');
-			break;
-		}
+	include('connection.php');
+	if (isset($_GET['controller']) && isset($_GET['action'])) {
+		$controller = $_GET['controller'];
+		$action     = $_GET['action'];
+	}else{
+		$controller = 'article';
+		$action     = 'listall';
 	}
-	else{
-		header('location: index.php?controller=article&action=listall');
-	}
+	include('views/layout.php');
 ?>
 </body>
