@@ -3,23 +3,22 @@
     require_once('controllers/' . $controller . '_controller.php');
 
     switch($controller) {
-		case 'category':
-			include('models/category.php');
-			$controller = new CategoriesController();
-		break;
 		case 'article':
 			// we need the model to query the database later in the controller
 			include('models/article.php');
 			$controller = new ArticlesController();
 		break;
+		case 'user':
+			include('models/user.php');
+			$controller = new UsersController();
+		break;
     }
-
-     $controller->{ $action }();
+    $controller->{ $action }();
   }
 
   // we're adding an entry for the new controller and its actions
-  $controllers = array('category' => ['show','create'],
-                       'article' => ['listall', 'show', 'create','error','success']);
+  $controllers = array('article' => ['listall', 'show', 'create','error','success', 'deletet'],
+                       'user' => ['login', 'register', 'logout','success']);
 
   if (array_key_exists($controller, $controllers)) {
     if (in_array($action, $controllers[$controller])) {

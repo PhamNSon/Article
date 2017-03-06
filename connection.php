@@ -1,3 +1,6 @@
+<?php  
+session_start();
+?>
 <?php
   class Db {
     private static $instance = NULL;
